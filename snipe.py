@@ -1,7 +1,5 @@
-from requests import api
 from snipe_credentials import get_credentials
 from snipe_hardware import get_hardware
-import requests
 
 CREDENTIALS_PATH = "~/.snipe/credentials.yaml"
 DEFAULT_LIMIT = 1000
