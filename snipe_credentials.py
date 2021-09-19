@@ -39,8 +39,8 @@ def get_credentials(path):
             elif "api_key" not in credentials:
                 raise Exception("the " + path + " file " +
                                 "is missing the api_key")
-            elif credentials["url"][-1] != "/":
-                raise Exception("the url must end with a '/'!")
+            elif credentials["url"][-1] == "/":
+                credentials["url"] = credentials["url"][0:-1]
         except (yaml.YAMLError, Exception) as e:
             print(e)
             sys.exit(1)
